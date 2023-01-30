@@ -4,40 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css
+   "
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
     <title>nerds</title>
   </head>
   <body>
     <!--header шапка-->
     <header class="header">
-      <a href="#" class="header_logo">
-        <img src="#" alt="logo" />
-        photo
-      </a>
-      <nav class="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-items">
-            <a href="#" class="nav-link"> Студия </a>
-          </li>
-          <li class="nav-items">
-            <a href="#" class="nav-link"> Клиенты </a>
-          </li>
-          <li class="nav-items">
-            <a href="#" class="nav-link"> Магазин </a>
-          </li>
-          <li class="nav-items">
-            <a href="#" class="nav-link"> Контакты </a>
-          </li>
-        </ul>
-        <ul class="basket">
-          <li class="basket-list">фото</li>
-          <li class="basket-list">Корзина</li>
-        </ul>
-      </nav>
-      <!-- Секція герой-->
-      <section class="hero">
+      <div class="container">
+        <nav class="nav-menu">
+          <a href="#" class="header-logo">
+            <svg class="heder-logo__icon">
+              <use
+                href="../images/img-svg/symbol-defs.svg#icon-nerds-logo"
+              ></use>
+            </svg>
+          </a>
+          <ul class="nav-list">
+            <li class="nav-items">
+              <a href="#" class="nav-link"> Студия </a>
+            </li>
+            <li class="nav-items">
+              <a href="#" class="nav-link"> Клиенты </a>
+            </li>
+            <li class="nav-items">
+              <a href="#" class="nav-link"> Магазин </a>
+            </li>
+            <li class="nav-items">
+              <a href="#" class="nav-link"> Контакты </a>
+            </li>
+          </ul>
+          <ul class="basket">
+            <li class="basket-list">
+              <a class="basket-link">
+                <svg class="button-icon">
+                  <use
+                    href="../images/img-svg/symbol-defs.svg#icon-basket"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="basket-list">Корзина</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Секція герой-->
+    <section class="hero">
+      <div class="container">
         <ul class="hero-list">
           <li class="hero-items">
-            <h1 class="hreo-title">Долго, дорого, скрупулезно.</h1>
+            <h1 class="hero-title">Долго, дорого, скрупулезно.</h1>
             <p class="hero-paragraf">
               Математически выверенный дизайн для вашего сайта или мобильного
               приложения.
@@ -45,22 +72,24 @@
             <button class="hero-btn">УЗНАТЬ БОЛЬШЕ</button>
           </li>
           <li class="hero-items">
-            <img src="./images/img-cards/hero-foto.jpg" />
+            <img src="./images/img-cards/hero-png.png" />
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <!-- Секція карточки Фотокарточки !! Галерея прикладів робіт фірми-->
+    <!-- Секція карточки Фотокарточки !! Галерея прикладів робіт фірми-->
 
-      <section class="advertising">
+    <section class="advertising">
+      <div class="container">
         <ul class="advertising-list">
           <li class="advertising-item">
-            <img src="./images/img-cards/laptop.jpg" />
+            <img src="./images/img-cards/laptop.jpg" alt="laptop" />
             <h2 class="advertising-titel">Веб-сайты</h2>
             <p class="advertising-paragraf">
               Мир никогда не будет прежним после того как увидит ваш сайт!
             </p>
-            <button class="advertising-btn">Заказать</button>
+            <button class="advertising-btn sites">Заказать</button>
           </li>
           <li class="advertising-item">
             <img src="./images/img-cards/phone.jpg" />
@@ -68,7 +97,7 @@
             <p class="advertising-paragraf">
               Покорите топ-10 приложений в AppStore и Google Play
             </p>
-            <button class="advertising-btn">Заказать</button>
+            <button class="advertising-btn phone">Заказать</button>
           </li>
           <li class="advertising-item">
             <img src="./images/img-cards/tv.jpg" />
@@ -76,14 +105,94 @@
             <p class="advertising-paragraf">
               Вы даже не подозреваете, насколько вы изумительны!
             </p>
-            <button class="advertising-btn">Заказать</button>
+            <button class="advertising-btn tv">Заказать</button>
           </li>
         </ul>
-      </section>
-      <!-- Секція герой-->
-      <section></section>
-      <!-- Секція герой-->
-      <section></section>
-    </header>
+      </div>
+    </section>
+
+    <!-- Секція Краснодар Ботани-->
+
+    <section class="krasnodar">
+      <div class="container">
+        <ul class="krasnodar-list">
+          <li class="krasnodar-item">
+            <h2 class="kranodar-title">
+              Мы — маленькая, но гордая дизайн-студия из Краснодара.
+            </h2>
+            <p class="krasnodar-paragraf">
+              Исповедуем принципы минимализма и чистоты. Ставим математический
+              расчет превыше креатива. Работаем не покладая рук, как роботы.
+            </p>
+            <h3 class="krasnodar-subtitle">Выполняем заказы на разработку:</h3>
+            <div class="wrapper-subtitle">
+              <p class="   ">Веб-сайтов любой сложности</p>
+            </div>
+            <div class="wrapper-subtitle">
+              <p class="wrapper-item">Мобильные приложения для IOS и Android</p>
+            </div>
+            <div class="wrapper-subtitle">
+              <p class="wrapper-item">
+                Слайдшоу и видео для корпоративных презентаций
+              </p>
+            </div>
+          </li>
+          <div>
+            <img src="./images/img-cards/nerds-png.png" class="item-logo" />
+            <h3 class="nerds-statisik">с 2004 года Любим точность во всем:</h3>
+            <ul class="nerds-list">
+              <li class="nerds-item">
+                146<span class="mark">%</span>
+                <p class="nerds-paragraf">Уровень самоотдачи</p>
+              </li>
+              <li class="nerds-item">
+                100<span class="mark">%</span>
+                <p class="nerds-paragraf">Уровень самоотдачи</p>
+              </li>
+              <li class="nerds-item">
+                50<span class="mark">%</span>
+                <p class="nerds-paragraf">Уровень самоотдачи</p>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Секція партнери фірми-->
+    <section class="partners">
+      <div class="container">
+        <ul class="partners-list">
+          <li class="partners-list__items">
+            <a href="#" class="partners-logo">
+              <svg class="partners-logo__icon">
+                <use href="../images/img-svg/spride.svg#icon-html"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="partners-list__items">
+            <a href="#" class="partners-logo">
+              <svg class="partners-logo__icon">
+                <use href="../images/img-svg/spride.svg#icon-html"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="partners-list__items">
+            <a href="#" class="partners-logo">
+              <svg class="partners-logo__icon">
+                <use href="../images/img-svg/spride.svg#icon-html"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="partners-list__items">
+            <a href="#" class="partners-logo">
+              <svg class="partners-logo__icon">
+                <use href="../images/img-svg/spride.svg#icon-html"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>

@@ -1,0 +1,464 @@
+/* основний колір тексту #000000; */
+
+/*другорядний колір тексту #283136; */
+
+/* фкцент колір : #fb565a; */
+
+/* герой фоновий колір: #eeeeee; */
+
+/* другорядний колір тексту #283136; */
+
+/* колір фону блок герой і футор  #2F303A; */
+
+/* колір логотипу #000000 .. #2196F3; */
+
+/* колір тексту білий #FFFFFF; */
+
+:root {
+  --primart-text-color: #000000;
+  --subtitle-title-text-color: #283136;
+  --accent-color: #fb565a;
+  --hero-bg-color: #eeeeee;
+  --white-color: #ffffff;
+  --main-background-color: #888888;
+  --bg-button-gren: #00ca74;
+  --bg-button-yellow: #efc849;
+  --bg-button-red: #fb565a;
+  --contener-color: #eeeee;
+  --icon-color: #afb1b8;
+  --items-shadow: #eeeeee;
+  --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* heder хедер секція */
+
+.header {
+  background-color: var(--hero-bg-color);
+}
+
+.heder-logo__icon {
+  width: 160px;
+  height: 65px;
+}
+
+.header::after {
+  content: "";
+  margin-top: 0;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--primart-text-color);
+  opacity: 0.5;
+  box-shadow: 0 15px 40px 0px rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.87;
+  text-transform: uppercase;
+  color: var(--primart-text-color);
+  text-decoration: none;
+  /* outline: 1px solid blue; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  transition: color 250ms ease 0s;
+  transition-timing-function: linear;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+  /* transform: scale(1.5); */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--accent-color);
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 250ms var(--animation-timing-function);
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
+}
+
+.nav-menu {
+  /* outline: 1px solid red; */
+  display: flex;
+  background-color: var(--hero-bg-color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin-left: 202px;
+  gap: 45px;
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.button-icon {
+  width: 50px;
+  height: 30px;
+}
+
+.basket-list {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: center;
+  text-align: right;
+  text-transform: uppercase;
+  /*   */
+  cursor: pointer;
+
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+}
+
+/* hero герой секція */
+
+.hero {
+  background-color: var(--hero-bg-color);
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .hero-items {
+} */
+
+.hero-title {
+  /* outline: 1px solid blue; */
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  align-items: center;
+  width: 397px;
+}
+
+.hero-paragraf {
+  /* outline: 1px solid blue; */
+  font-size: 16px;
+  line-height: 1.5;
+  width: 400px;
+  margin-top: 25px;
+  color: var(--subtitle-title-text-color);
+}
+
+.hero-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  padding: 17px 54px;
+  border-radius: 3px;
+  margin-top: 38px;
+  border: none;
+  cursor: pointer;
+  transition: transform 250ms var(--animation-timing-function);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  /* color: var(--accent-color); */
+  transform: scale(1.1);
+  box-shadow: rgba(255, 119, 0, 0.6) 0px 0px 8px 4px;
+}
+
+/*  Секція карточки Фотокарточки !! Галерея прикладів робіт фірми */
+
+.advertising-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.advertising-titel {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--primart-text-color);
+  margin-top: 25px;
+}
+
+.advertising-paragraf {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--subtitle-title-text-color);
+  margin-top: 16px;
+  width: 260px;
+}
+
+.advertising-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+  padding: 17px 40px;
+  border-radius: 3px;
+  border: none;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: transform 250ms var(--animation-timing-function);
+}
+
+.advertising-btn:hover,
+.advertising-btn:focus {
+  /* color: var(--accent-color); */
+  transform: scale(1.1);
+  box-shadow: rgba(255, 119, 0, 0.6) 0px 0px 8px 4px;
+}
+
+.sites {
+  background-color: var(--bg-button-red);
+}
+
+.phone {
+  background-color: var(--bg-button-gren);
+}
+
+.tv {
+  background-color: var(--bg-button-yellow);
+}
+
+.advertising::after {
+  content: "";
+  margin-top: 80px;
+  display: block;
+  height: 3px;
+  width: 1415px;
+  background-color: var(--hero-bg-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*  Секція Краснодар Ботани */
+
+.krasnodar-list {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 40px; */
+}
+
+.item-logo {
+  margin-top: 40px;
+}
+
+.kranodar-title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 1;
+  align-items: center;
+  width: 651px;
+  outline: 1px solid red;
+  margin-top: 71px;
+  color: var(--primart-text-color);
+}
+
+.krasnodar-paragraf {
+  font-size: 16px;
+  line-height: 1.5;
+  outline: 1px solid red;
+  width: 650px;
+  color: var(--primart-text-color);
+  margin-top: 32px;
+}
+
+.krasnodar-subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: 1px solid red;
+  text-transform: uppercase;
+  width: 306px;
+  margin-top: 40px;
+  color: var(--subtitle-title-text-color);
+}
+
+.wrapper-subtitle {
+  display: block;
+  width: 400px;
+  /* height: 40px; */
+  outline: 1px solid red;
+  margin-top: 40px;
+}
+
+.wrapper-item {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--subtitle-title-text-color);
+  position: relative;
+}
+
+.wrapper-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 5px;
+  color: red;
+}
+
+.nerds-statisik {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  outline: 1px solid red;
+  color: var(--primart-text-color);
+  margin-top: 37px;
+}
+
+.nerds-list {
+  display: flex;
+}
+
+.nerds-item {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.42;
+  color: var(--primart-text-color);
+  margin-top: 31px;
+}
+
+.mark {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+  /* identical to box height, or 154% */
+
+  color: #000000;
+}
+
+.nerds-paragraf {
+  font-size: 16px;
+  line-height: 1.12;
+  /* or 112% */
+  color: var(--subtitle-title-text-color);
+  width: 120px;
+  margin-top: 10px;
+}
+
+/*  Секція партнери фірми */
+
+.krasnodar::after {
+  content: "";
+  margin-top: 80px;
+  display: block;
+  height: 3px;
+  width: 1415px;
+  background-color: var(--hero-bg-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partners-list {
+  display: flex;
+}
+
+.partners::after {
+  content: "";
+  margin-top: 40px;
+  display: block;
+  height: 3px;
+  width: 1415px;
+  background-color: var(--hero-bg-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partners-logo__icon {
+  margin-top: 40px;
+  padding-right: 45px;
+  margin-left: 45px;
+  border-right: 5px solid;
+  color: var(--hero-bg-color);
+  fill: var(--hero-bg-color);
+}
+
+.partners-logo__icon:hover,
+.partners-logo__icon:focus {
+  fill: var(--accent-color);
+  /* transform: scale(1.5); */
+}
+
+.partners-logo__icon:last-child {
+  content: "none";
+}
+
+.partners-logo {
+  width: 200px;
+  height: 68px;
+  /* outline: 1px solid red;
+  padding-right: 40px; */
+}
+
+.partners-logo__icon {
+  color: var(--hero-bg-color);
+}
