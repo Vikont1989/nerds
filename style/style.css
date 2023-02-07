@@ -17,13 +17,19 @@
 :root {
   --primart-text-color: #000000;
   --subtitle-title-text-color: #283136;
-  --accent-color: #fb565a;
+  --bg-button-red: #fb565a;
+  --bg-button-red-akcent: #e74246;
+  --bg-button-red-clikc: #d7373b;
+  --bg-button-gren: #00ca74;
+  --bg-button-gren-akcent: #00bc6c;
+  --bg-button-gren-clikc: #00aa62;
+  --bg-button-yellow: #efc849;
+  --bg-button-yellow-akcent: #eab534;
+  --bg-button-yellow-clikc: #e5a722;
   --hero-bg-color: #eeeeee;
   --white-color: #ffffff;
   --main-background-color: #888888;
-  --bg-button-gren: #00ca74;
-  --bg-button-yellow: #efc849;
-  --bg-button-red: #fb565a;
+  --footer-text: #666666;
   --contener-color: #eeeee;
   --icon-color: #afb1b8;
   --items-shadow: #eeeeee;
@@ -65,6 +71,8 @@ body {
 .heder-logo__icon {
   width: 160px;
   height: 65px;
+  color: var(--hero-bg-color);
+  fill: var(--hero-bg-color);
 }
 
 .header::after {
@@ -162,11 +170,7 @@ body {
   align-items: center;
   text-align: right;
   text-transform: uppercase;
-  /*   */
   cursor: pointer;
-
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
 }
 
 /* hero герой секція */
@@ -180,9 +184,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
-/* .hero-items {
-} */
 
 .hero-title {
   /* outline: 1px solid blue; */
@@ -209,7 +210,7 @@ body {
   align-items: center;
   text-align: center;
   color: var(--white-color);
-  background-color: var(--accent-color);
+  background-color: var(--bg-button-red);
   padding: 17px 54px;
   border-radius: 3px;
   margin-top: 38px;
@@ -220,9 +221,13 @@ body {
 
 .hero-btn:hover,
 .hero-btn:focus {
-  /* color: var(--accent-color); */
   transform: scale(1.1);
   box-shadow: rgba(255, 119, 0, 0.6) 0px 0px 8px 4px;
+  background-color: var(--bg-button-red-akcent);
+}
+
+.hero-btn:active {
+  background-color: var(--bg-button-red-clikc);
 }
 
 /*  Секція карточки Фотокарточки !! Галерея прикладів робіт фірми */
@@ -268,23 +273,56 @@ body {
   transition: transform 250ms var(--animation-timing-function);
 }
 
-.advertising-btn:hover,
-.advertising-btn:focus {
-  /* color: var(--accent-color); */
-  transform: scale(1.1);
-  box-shadow: rgba(255, 119, 0, 0.6) 0px 0px 8px 4px;
-}
+/* кнопка червона */
 
 .sites {
   background-color: var(--bg-button-red);
 }
 
+.sites:hover,
+.sites:focus {
+  transform: scale(1.1);
+  box-shadow: rgba(217, 183, 192, 0.915) 0px 0px 8px 4px;
+  background-color: var(--bg-button-red-akcent);
+}
+
+.sites:active {
+  background-color: var(--bg-button-red-clikc);
+}
+
+/* кнопка зелена */
+
 .phone {
   background-color: var(--bg-button-gren);
 }
 
+.phone:hover,
+.phone:focus {
+  /* color: var(--accent-color); */
+  transform: scale(1.1);
+  box-shadow: rgba(217, 183, 192, 0.915) 0px 0px 8px 4px;
+  background-color: var(--bg-button-gren-akcent);
+}
+
+.phone:active {
+  background-color: var(--bg-button-gren-clikc);
+}
+
+/* кнопка жовта */
+
 .tv {
   background-color: var(--bg-button-yellow);
+}
+
+.tv:hover,
+.tv:focus {
+  transform: scale(1.1);
+  box-shadow: rgba(217, 183, 192, 0.915) 0px 0px 8px 4px;
+  background-color: var(--bg-button-yellow-akcent);
+}
+
+.phone:active {
+  background-color: var(--bg-button-yellow-clikc);
 }
 
 .advertising::after {
@@ -316,7 +354,7 @@ body {
   line-height: 1;
   align-items: center;
   width: 651px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   margin-top: 71px;
   color: var(--primart-text-color);
 }
@@ -324,7 +362,7 @@ body {
 .krasnodar-paragraf {
   font-size: 16px;
   line-height: 1.5;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   width: 650px;
   color: var(--primart-text-color);
   margin-top: 32px;
@@ -334,7 +372,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
-  outline: 1px solid red;
   text-transform: uppercase;
   width: 306px;
   margin-top: 40px;
@@ -342,11 +379,11 @@ body {
 }
 
 .wrapper-subtitle {
-  display: block;
-  width: 400px;
-  /* height: 40px; */
-  outline: 1px solid red;
+  display: inline-block;
+  width: 650px;
   margin-top: 40px;
+  padding-left: 32px;
+  /* outline: 1px solid red; */
 }
 
 .wrapper-item {
@@ -359,10 +396,11 @@ body {
 .wrapper-item::before {
   content: "";
   position: absolute;
-  display: block;
-  height: 5px;
-  width: 5px;
-  color: red;
+  background: var(--bg-button-red);
+  width: 25px;
+  height: 2px;
+  margin-left: -32px;
+  margin-top: 11px;
 }
 
 .nerds-statisik {
@@ -370,7 +408,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   text-transform: uppercase;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   color: var(--primart-text-color);
   margin-top: 37px;
 }
@@ -459,6 +497,75 @@ body {
   padding-right: 40px; */
 }
 
-.partners-logo__icon {
-  color: var(--hero-bg-color);
+/*  Секція партнери фірми */
+
+.footer {
+  margin-top: 80px;
+}
+
+.container-footer {
+  height: 416px;
+  max-width: 1440px;
+  outline: 1px solid black;
+  margin-top: 80px;
+  margin: 0 auto;
+
+  background-image: url(../images/img-cards/map.jpg);
+
+  background-size: no-repeat;
+
+  background-position: center;
+
+  background-size: cover;
+  position: relative;
+}
+
+.footer-wrapper {
+  display: block;
+  width: 308px;
+  height: 320px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 53px;
+  left: 140px;
+}
+
+.footer-title {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.66;
+  color: var(--primart-text-color);
+  text-transform: uppercase;
+}
+
+.footer-adres__link {
+  /* outline: 1px solid red; */
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.25;
+  text-decoration: none;
+  margin-top: 30px;
+  color: var(--footer-text);
+}
+
+.footer-btn {
+  display: block;
+  padding: 15px 44px;
+  margin: 0 auto;
+  margin-top: 38px;
+  cursor: pointer;
+  background-color: var(--bg-button-red);
+  color: var(--white-color);
+  border: none;
+  border-radius: 3px;
+}
+
+.location {
+  display: block;
+  position: absolute;
+  top: 87px;
+  left: 825px;
 }
