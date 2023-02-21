@@ -838,7 +838,6 @@ body {
 
 .cards-prise {
   width: 350px;
-  /* background-color: var(--hero-bg-color); */
   padding-top: 26px;
   padding-bottom: 44px;
   /* outline: 5px solid red; */
@@ -896,4 +895,28 @@ body {
 
 .cards-btn:active {
   background-color: var(--bg-button-red-clikc);
+}
+
+/* чекбокси лейбли і радіо */
+
+.option {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.check {
+  /* margin-left: 20px; */
+}
+
+.checkbox__input {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.check_box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: tomato;
 }
